@@ -18,6 +18,7 @@ export default function Banner() {
 
   const searchOnChange = (event) => {
     setSearch(event.target.value)
+    navigate(`/?search=${event.target.value}&genre=${selectedGenre}`);
   }
 
   const searchButtonClicked = () => {
