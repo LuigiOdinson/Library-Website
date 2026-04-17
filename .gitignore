@@ -1,0 +1,48 @@
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.*
+.env.*.local
+
+# Logs
+*.log
+logs/
+log/
+
+# Temporary / cache
+tmp/
+temp/
+.cache/
+.DS_Store
+Thumbs.db
+
+# Vite / React (Frontend)
+dist/
+.vite/
+vite.config.js.timestamp*
+
+# React static build
+public/build/
+
+# Express (Backend)
+# Typical build/output folders if using TS or bundlers
+build/
+out/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# IDE / OS / Misc
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+desktop.ini

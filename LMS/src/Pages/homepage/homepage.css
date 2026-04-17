@@ -1,0 +1,118 @@
+.home-page {
+  margin-top: 60px;
+}
+
+/*Banner*/
+.banner {
+    background-color: #bfd0d9;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.search-bar {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.search-section {
+    margin-bottom: 10px;
+    height: 35px;
+}
+.search-section input {
+    width: 400px;
+    height: 100%;
+    padding: 0px 10px;
+    border: 1px solid #578FCA;
+    border-radius: 1rem;
+    margin-right: 10px;
+}
+.search-section input:focus {
+    outline: none;
+}
+.search-section button {
+    height: 100%;
+    padding: 0.5rem 1rem;
+    background-color: #1d2d44;
+    border: none;
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.filter-section {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+.filter-tag {
+    background-color: white;
+    color: #1d2d44;
+    border: 1px solid #578FCA;
+    border-radius: 20px;
+    margin-left: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.3s, color 0.3s;
+}
+.filter-tag:hover {
+    background-color: #dedede;
+}
+
+/*BooksGrid*/
+.books-grid {
+    display: grid;
+    /*
+    auto-fill adjusts the number of columns based on available space
+    minmax(230px, 1fr) ensures each column is at least 230px but can expand if there’s extra space
+    */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 30px 30px;
+    max-width: 1500px;
+    margin: auto;
+}
+.book {
+    background-color: #edf6f9;
+    height: 450px;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 7px 7px 7px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+.book:hover {
+    transform: scale(1.03);
+}
+.book-cover {
+    width: calc(100% - 20px); 
+    /* -10px so the margin:5px doesn't expand beyond its container and break */
+    height: 80%;
+    margin: 10px;
+    margin-bottom: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.book-title-info {
+    padding: 10px 15px;
+    color: #1d2d44;
+}
+.book-title-info h2 {
+    font-size: 18px;
+    margin-bottom: 0.3rem;
+}
+.book-title-info p {
+    font-size: 15px;
+}
+.books-grid a {
+    text-decoration: none;
+    color: black;
+}

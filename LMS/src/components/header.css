@@ -1,0 +1,32 @@
+.header {
+  height: 60px;
+  background-color: #1d2d44;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 30px;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+.left-section {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+.logo-text {
+  margin-left: 5px;
+  font-size: 20px;;
+}
+.header .link {
+  text-decoration: none;
+  color: white;
+}
+.book-icon {
+  width: 2.3rem;
+}
