@@ -25,8 +25,14 @@ export default function ActiveBorrowsSection({ active }) {
             
             // calculating percentage of time elapsed
             let timeElapsedMS = currentTimeMS - borrowedAtMS;
+
+            // ----------------FOR TESTING------------------
+            //timeElapsedMS = dayjs(timeElapsedMS).add(3, 'day')
+            // ---------------------------------------------
+
             let totalDaysMS = borrow.return_option_days * (24 * 60 * 60 * 1000);
             let timeElapsedPercentage = (timeElapsedMS / totalDaysMS) * 100;
+            let timeElapsedComplete = (timeElapsedPercentage >= 100);
 
             return (
               <div className="book-container" key={borrow.id}>
@@ -39,7 +45,11 @@ export default function ActiveBorrowsSection({ active }) {
 
                 <div className="return-status">
                   <div>
-                    <p className="return-status-text">Time left to return: </p>
+                    {
+                      timeElapsedComplete
+                        ? <p className="return-status-text">Please Return the book</p>
+                        : <p className="return-status-text">Time Left to return:</p>
+                    }
 
                     <div className="progress-bar-section">
                       <div className="progress-bar-container">
@@ -47,6 +57,7 @@ export default function ActiveBorrowsSection({ active }) {
                       </div>
                       <div className="dates-container">
                         <p className="date">borrowed at: {borrowedAtDate}</p>
+                        <p className="date">(total days: {borrow.return_option_days} days)</p>
                         <p className="date">return at: {returnAtDate}</p>
                       </div>
                     </div>
