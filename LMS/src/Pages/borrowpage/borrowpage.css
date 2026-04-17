@@ -50,16 +50,23 @@
 .return-options {
   margin-bottom: 25px;
 }
-.return-option {
+.return-option-container {
   border: 1px solid rgb(129, 129, 129);
   border-radius: 4px;
-  padding: 15px 10px;
-
+  
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.return-option-title {
+  display: flex;
+  background-color: #1d2d44;
+  color: white;
+  padding: 5px;
+}
+.return-option-grid {
   display: grid;
   grid-template-columns: 30px 1fr 1.3fr;
-  margin-bottom: 15px;
-  cursor: pointer;
-
+  padding: 13px 10px;
 }
 .return-option-date,
 .return-option-fine {

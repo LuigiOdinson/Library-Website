@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useParams, useNavigate } from "react-router";
+import ReturnOptions from "./ReturnOptions";
 import axios from "axios"
 
 export default function BorrowSection({ returnOptions }) {
@@ -31,26 +32,8 @@ export default function BorrowSection({ returnOptions }) {
       <p className='borrow-option-title'>
         Choose your return due-date:
       </p>
-      {
-        returnOptions.map((returnOption) => {
-
-          const returnOptionClicked = () => {
-            setReturnOptionId(returnOption.id)
-          }
-
-          return (
-            <div key={returnOption.id} className="return-option" onClick={returnOptionClicked}>
-              <input type="radio" name={bookId} checked={returnOption.id === returnOptionId} onChange={() => {}}/>
-              <div className="return-option-date">
-                <span style={{ fontSize: "14px" }}>Return on: </span>12/12/12
-              </div>
-              <div className="return-option-fine">
-                <span style={{ fontSize: "14px" }}>Fine for not returning: </span>{returnOption.fine} Toman
-              </div>
-            </div>
-          )
-        })
-      }
+      
+      <ReturnOptions returnOptions={returnOptions} returnOptionId={returnOptionId} setReturnOptionId={setReturnOptionId} />
 
       <div className="borrow-button-div">
         <button className='borrow-button' onClick={borrowButtonClicked}>Borrow</button>

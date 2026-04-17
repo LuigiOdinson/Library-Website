@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-import { useNavigate, useParams } from "react-router";
 import Header from "../../components/Header";
 import BookSection from "./BookSection";
 import BorrowSection from './BorrowSection'
