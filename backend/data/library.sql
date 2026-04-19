@@ -140,10 +140,3 @@ INSERT INTO books_authors (book_id, author_id) VALUES
 (3, 3),  -- To Kill a Mockingbird -> Harper Lee
 (4, 4),  -- Pride and Prejudice -> Jane Austen
 (5, 5);  -- The Catcher in the Rye -> J.D. Salinger
-
-INSERT INTO user (first_name, last_name, birth_date, email, password, address) VALUES
-('Alice', 'Johnson', '1995-08-15', 'alice.johnson@example.com', '123', 'asds asdasd'),
-('Bob', 'Smith', '1988-03-22', 'bob.smith@example.com', '123', 'dd -d d dasd'),
-('Charlie', 'Brown', '2000-06-10', 'charlie.brown@example.com', '123', 'd'),
-('Diana', 'Miller', '1992-11-05', 'diana.miller@example.com', '123', 'fff'),
-('Ethan', 'Wilson', '1985-09-30', 'ethan.wilson@example.com', '123', 'asdasd');

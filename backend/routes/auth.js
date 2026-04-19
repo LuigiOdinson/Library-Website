@@ -12,7 +12,7 @@ router.post("/register", async (req, res) => {
   }
 
   try {
-    const [user] = await usersDB.findUserByEmail(email);
+  const [user] = await usersDB.findUserByEmail(email);
   if (user) {
     return res.status(400).json({error: "User with this email already exists", user: user.first_name});
   } 
@@ -23,7 +23,7 @@ router.post("/register", async (req, res) => {
 
   const [newUser] = await usersDB.register({first_name, last_name, birth_date, email, password:hashedPassword, address});
 
-  res.status(201).json({message: "user registered", user: newUser.first_name});
+  res.status(201).json({message: `user ${newUser.first_name} registered`});
 
   } catch (error) {
     console.log(error);

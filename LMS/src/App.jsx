@@ -3,6 +3,7 @@ import { Routes, Route, useSearchParams } from 'react-router'
 import axios from 'axios'
 import HomePage from './Pages/homepage/HomePage'
 import LoginPage from './Pages/authpages/LoginPage'
+import RegisterPage from './Pages/authpages/RegisterPage'
 import BorrowPage from './Pages/borrowpage/BorrowPage'
 import ProfilePage from './Pages/profilepage/ProfilePage'
 import './App.css'
@@ -40,6 +41,7 @@ function App() {
         <Route index element={<HomePage books={books} />}/>
         <Route path='/books/:bookId' element={<BorrowPage />} />
         <Route path='/auth/login' element={<LoginPage />}></Route>
+        <Route path='/auth/register' element={<RegisterPage />}></Route>
         <Route path='/profile' element={<ProfilePage />}></Route>
       </Routes>
     </UserProvider>

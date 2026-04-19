@@ -43,17 +43,19 @@ export default function LoginPage() {
 
           <div className="auth-section">
             <NavLink to={"/auth/register"} className="auth-link">Register</NavLink>
-            <div className="email-section">
+
+            <div>
               <p>Email:</p>
               <input type="text" value={email} onChange={emailOnChange} />
             </div>
-            <div className="password-section">
+            <div>
               <p>Password:</p>
               <input type="password" value={password} onChange={passwordOnChange} />
             </div>
             <div className="auth-button-container">
               <button className="auth-button" onClick={loginButtonClicked}>Login</button>
             </div>
+            
             {error &&
               <div className="message-section">
                 {error}
