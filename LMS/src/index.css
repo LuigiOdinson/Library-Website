@@ -9,10 +9,11 @@ p {
 }
 
 .message-section {
+  margin-top: 10px;
   background-color: #ffcfcf;
   display: flex;
   justify-content: center;
-  padding: 10px 0px;
+  padding: 10px 15px;
   font-size: 18px;
 }
 .global-button-style {

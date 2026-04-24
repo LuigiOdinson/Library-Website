@@ -6,6 +6,7 @@ import axios from "axios"
 export default function BorrowSection({ returnOptions }) {
   const { bookId } = useParams();
   const [returnOptionId, setReturnOptionId] = useState(1);
+  const [borrowError, setBorrowError] = useState("");
   const [borrowMessage, setBorrowMessage] = useState("");
   const navigate = useNavigate();
 
@@ -23,7 +24,7 @@ export default function BorrowSection({ returnOptions }) {
       }, 3000);
     }
     catch (err) {
-      setBorrowMessage(err.response.data.error);
+      setBorrowError(err.response.data.error);
     }
   }
 
@@ -39,9 +40,21 @@ export default function BorrowSection({ returnOptions }) {
         <button className='global-button-style' onClick={borrowButtonClicked}>Borrow</button>
       </div>
 
-      {borrowMessage && 
+      {borrowError && 
       <div className="message-section">
-        <p>{borrowMessage}</p>
+        <p>{borrowError}</p>
+      </div>}
+
+      {borrowMessage && 
+      <div className="popup-overlay">
+        <div className="popup-container">
+          <div className="popup-row">
+            <img src="/images/check-icon.ico" alt="check-icon" className="check-icon" />
+            {borrowMessage}
+          </div>
+          <div className="popup-row">Moving you to your profile page...</div>
+        </div>
+        
       </div>}
     </div>
   )
