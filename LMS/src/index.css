@@ -7,3 +7,21 @@ body {
 p {
   margin: 0;
 }
+
+.message-section {
+  background-color: #ffcfcf;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px;
+  font-size: 18px;
+}
+.global-button-style {
+  background-color: #1d2d44;
+  color: white;
+  height: 100%;
+  padding: 0.5rem 2rem;
+  font-size: 15px;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}

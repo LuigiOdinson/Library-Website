@@ -36,7 +36,7 @@ export default function BorrowSection({ returnOptions }) {
       <ReturnOptions returnOptions={returnOptions} returnOptionId={returnOptionId} setReturnOptionId={setReturnOptionId} />
 
       <div className="borrow-button-div">
-        <button className='borrow-button' onClick={borrowButtonClicked}>Borrow</button>
+        <button className='global-button-style' onClick={borrowButtonClicked}>Borrow</button>
       </div>
 
       {borrowMessage && 

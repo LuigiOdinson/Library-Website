@@ -51,7 +51,7 @@ export default function Banner() {
       <div className='search-bar'>
         <div className='search-section'>
           <input type="text" placeholder="Search" value={search} onChange={searchOnChange} />
-          <button onClick={searchButtonClicked}>Search</button>
+          <button onClick={searchButtonClicked} className="global-button-style">Search</button>
         </div>
 
         <div className='filter-section'>

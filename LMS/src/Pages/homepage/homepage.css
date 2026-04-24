@@ -34,15 +34,6 @@
 .search-section input:focus {
     outline: none;
 }
-.search-section button {
-    height: 100%;
-    padding: 0.5rem 1rem;
-    background-color: #1d2d44;
-    border: none;
-    color: white;
-    border-radius: 1rem;
-    cursor: pointer;
-}
 
 .filter-section {
     display: flex;

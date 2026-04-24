@@ -90,7 +90,7 @@ export default function RegisterPage() {
               <input type="password" value={password} onChange={passwordOnChange} />
             </div>
             <div className="auth-button-container">
-              <button className="auth-button" onClick={registerButtonClicked}>Register</button>
+              <button className="global-button-style" onClick={registerButtonClicked}>Register</button>
             </div>
             
             {error &&

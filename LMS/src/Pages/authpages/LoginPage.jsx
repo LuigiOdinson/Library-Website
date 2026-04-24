@@ -53,7 +53,7 @@ export default function LoginPage() {
               <input type="password" value={password} onChange={passwordOnChange} />
             </div>
             <div className="auth-button-container">
-              <button className="auth-button" onClick={loginButtonClicked}>Login</button>
+              <button className="global-button-style" onClick={loginButtonClicked}>Login</button>
             </div>
             
             {error &&

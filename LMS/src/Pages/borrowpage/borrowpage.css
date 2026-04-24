@@ -76,21 +76,3 @@
   display: flex;
   justify-content: center;
 }
-.borrow-button {
-  border: none;
-  background-color: #1d2d44;
-  color: white;
-  font-size: 18px;
-  padding: 10px 30px;
-  border-radius: 1rem;
-  cursor: pointer;
-  margin-bottom: 15px;
-}
-
-.message-section {
-  background-color: #ffcfcf;
-  display: flex;
-  justify-content: center;
-  padding: 10px 0px;
-  font-size: 18px;
-}
