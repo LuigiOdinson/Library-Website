@@ -1,6 +1,7 @@
 import express from "express"
 import session from "express-session"
 import cors from "cors"
+import { addDefautBooks } from "./initializeDatabase.js"
 
 import bookRoutes from './routes/books.js'
 import borrowRoutes from './routes/borrow.js'
@@ -35,6 +36,11 @@ app.use("/api/returnOptions", returnOptionRoutes);
 app.use((err, req, res, next) => {
   res.status(500).send(err)
 })
-app.listen(8080, () => {
-  console.log("Server running on port 8080")
-})
+async function startServer() {
+  await addDefautBooks(); // initializing database
+  app.listen(8080, () => {
+    console.log("Server running on port 8080")
+  })
+}
+
+startServer();

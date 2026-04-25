@@ -104,14 +104,7 @@ CREATE VIEW book_borrow_returnOption AS
 
 
 
--- inserting sample data 
-INSERT INTO book (book_name, published_at) VALUES
-('The Great Gatsby', 1925),
-('1984', 1949),
-('To Kill a Mockingbird', 1960),
-('Pride and Prejudice', 1813),
-('The Catcher in the Rye', 1951);
-
+-- inserting default genres and authors
 
 INSERT INTO genre (genre_name) VALUES
 ('Fiction'),
@@ -120,23 +113,9 @@ INSERT INTO genre (genre_name) VALUES
 ('Mystery'),
 ('Romance');
 
-INSERT INTO books_genres (book_id, genre_id) VALUES
-(1, 3),  -- The Great Gatsby -> Classic
-(2, 2),  -- 1984 -> Science Fiction
-(3, 3),  -- To Kill a Mockingbird -> Classic
-(4, 5),  -- Pride and Prejudice -> Romance
-(5, 3);  -- The Catcher in the Rye -> Classic
-
 INSERT INTO author (author_name) VALUES
 ('F. Scott Fitzgerald'),
 ('George Orwell'),
 ('Harper Lee'),
 ('Jane Austen'),
 ('J.D. Salinger');
-
-INSERT INTO books_authors (book_id, author_id) VALUES
-(1, 1),  -- The Great Gatsby -> F. Scott Fitzgerald
-(2, 2),  -- 1984 -> George Orwell
-(3, 3),  -- To Kill a Mockingbird -> Harper Lee
-(4, 4),  -- Pride and Prejudice -> Jane Austen
-(5, 5);  -- The Catcher in the Rye -> J.D. Salinger
