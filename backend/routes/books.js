@@ -14,15 +14,16 @@ router.post("/", async (req, res) => {
   // getting the ids from genre and author names
   const genre_result = await booksDB.get_genre_id(genre);
   const author_result = await booksDB.get_author_id(author);
-  const genre_id =  genre_result[0].id;
-  const author_id = author_result[0].id;
 
-  if (!genre_id) {
+  if (!genre_result) {
     res.status(400).json({error: "This genre hasn't been registered in the database"});
   }
-  if (!author_id) {
+  if (!author_result) {
     res.status(400).json({error: "This author hasn't been registered in the database"});
   }
+
+  const genre_id =  genre_result[0].id;
+  const author_id = author_result[0].id;
 
   const [book] = await booksDB.add_book(book_name, published_at, genre_id, author_id);
 
