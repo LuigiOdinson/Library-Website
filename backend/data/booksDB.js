@@ -39,13 +39,23 @@ export async function get_single_book(id) {
   return result.length ? result : null
 }
 
-export async function add_book(book_name, published_at) {
+export async function add_book(book_name, published_at, genre_id, author_id) {
   const [result] = await pool.query(`
     INSERT INTO book (book_name, published_at)
     VALUES (?, ?)  
-  `, [book_name, published_at])
-  const id = result.insertId
-  return get_single_book(id)
+  `, [book_name, published_at]);
+
+  const book_id = result.insertId;
+
+  await pool.query(`
+    INSERT INTO books_genres (book_id, genre_id) VALUES (? ,?);
+  `, [book_id, genre_id]);
+
+  await pool.query(`
+    INSERT INTO books_authors (book_id, author_id) VALUES (? ,?);
+  `, [book_id, author_id]);
+
+  return get_single_book(book_id);
 }
 
 export async function update_book_status(book_id, borrowed) {
@@ -57,9 +67,25 @@ export async function update_book_status(book_id, borrowed) {
   return get_single_book(book_id);
 }
 
+// GENRES AND AUTHORS
+
 export async function get_genres() {
   const [result] = await pool.query(`
     SELECT * FROM genre
   `);
+  return result.length ? result : null
+}
+
+export async function get_genre_id(genre) {
+  const [result] = await pool.query(`
+    SELECT id FROM genre WHERE genre_name = ?
+  `, [genre]);
+  return result.length ? result : null
+}
+
+export async function get_author_id(author) {
+  const [result] = await pool.query(`
+    SELECT id FROM author WHERE author_name = ?
+  `, [author]);
   return result.length ? result : null
 }

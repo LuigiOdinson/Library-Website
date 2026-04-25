@@ -8,6 +8,27 @@ router.get("/", async (req, res) => {
   res.status(200).json(books);
 });
 
+router.post("/", async (req, res) => {
+  const {book_name, published_at, genre, author} = req.body;
+
+  // getting the ids from genre and author names
+  const genre_id = await booksDB.get_genre_id(genre);
+  const author_id = await booksDB.get_author_id(author);
+
+  if (!genre_id) {
+    res.status(400).json({error: "This genre hasn't been registered in the database"});
+  }
+  if (!author_id) {
+    res.status(400).json({error: "This author hasn't been registered in the database"});
+  }
+
+  const [book] = await booksDB.add_book(book_name, published_at, genre_id[0].id, author_id[0].id);
+
+  if (book) {
+    res.status(201).json({message: `book ${book.book_name} added to the library`});
+  }
+})
+
 router.post("/search", async (req, res) => {
   const {search, genre} = req.body;
   const books = await booksDB.get_books(search, genre);
