@@ -1,5 +1,5 @@
-import { defaultBooks } from "./defaultData/defaultBooks.js";
-import * as booksDB from "./data/booksDB.js"
+import { defaultBooks } from "./defaultBooks.js";
+import * as booksDB from "../data/booksDB.js"
 
 export async function addDefautBooks() {
   const books = await booksDB.get_books();

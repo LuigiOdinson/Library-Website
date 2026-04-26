@@ -1,7 +1,7 @@
 import express from "express"
 import session from "express-session"
 import cors from "cors"
-import { addDefautBooks } from "./initializeDatabase.js"
+import { addDefautBooks } from "./defaultData/initializeDatabase.js"
 
 import bookRoutes from './routes/books.js'
 import borrowRoutes from './routes/borrow.js'

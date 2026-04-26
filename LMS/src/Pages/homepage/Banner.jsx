@@ -21,10 +21,6 @@ export default function Banner() {
     navigate(`/?search=${event.target.value}&genre=${selectedGenre}`);
   }
 
-  const searchButtonClicked = () => {
-    navigate(`/?search=${search}&genre=${selectedGenre}`);
-  }
-
   // handling navigate path when selectedGenre changes
   useEffect(() => {
     if (selectedGenre === "") {
@@ -50,8 +46,7 @@ export default function Banner() {
 
       <div className='search-bar'>
         <div className='search-section'>
-          <input type="text" placeholder="Search" value={search} onChange={searchOnChange} />
-          <button onClick={searchButtonClicked} className="global-button-style">Search</button>
+          <input type="text" placeholder="Search book/author" value={search} onChange={searchOnChange} />
         </div>
 
         <div className='filter-section'>

@@ -24,7 +24,7 @@
     height: 35px;
 }
 .search-section input {
-    width: 400px;
+    width: 450px;
     height: 100%;
     padding: 0px 10px;
     border: 1px solid #578FCA;
@@ -69,7 +69,7 @@
 }
 .book {
     background-color: #edf6f9;
-    height: 450px;
+    height: auto;
     border-radius: 1rem;
     cursor: pointer;
     box-shadow: 7px 7px 7px rgba(0,0,0,0.2);
