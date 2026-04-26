@@ -103,19 +103,27 @@ CREATE VIEW book_borrow_returnOption AS
   JOIN return_option ON return_option.id = borrow.return_option_id;
 
 
-
 -- inserting default genres and authors
 
 INSERT INTO genre (genre_name) VALUES
 ('Fiction'),
-('Science Fiction'),
 ('Classic'),
-('Mystery'),
-('Romance');
+('Adventure'),
+('Romance'),
+('Self-Help'),
+('Fantasy');
+
 
 INSERT INTO author (author_name) VALUES
 ('F. Scott Fitzgerald'),
 ('George Orwell'),
 ('Harper Lee'),
 ('Jane Austen'),
-('J.D. Salinger');
+('J.D. Salinger'),
+('Sadegh Hedayat'),
+('Fyodor Dostoevsky'),
+('James Clear'),
+('Jules Verne'),
+('J.R.R. Tolkien'),
+('George R.R. Martin'),
+('Scott Lynch');
