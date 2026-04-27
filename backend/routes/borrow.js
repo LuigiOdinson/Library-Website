@@ -25,8 +25,6 @@ router.get("/myBorrows", isAuthenticated, async (req, res) => {
   const user_id = req.session.user_id;
   const [myBorrows] = await borrowDB.get_borrows_info_by_user(user_id);
 
-  // const active = myBorrows.filter(b => !b.returned_at);
-  // const history = myBorrows.filter(b => b.returned_at);
   let active = [];
   let history = [];
   // if borrow has been returned it gets added to history, else it's still active

@@ -26,7 +26,7 @@ export default function Header() {
       <div>
         {user
           ? <div>
-            <NavLink to={"/profile"} className="link">{user.first_name}</NavLink> | <button onClick={logoutButtonClicked}>Logout</button>
+            <NavLink to={"/profile"} className="link">Profile: {user.first_name}</NavLink> | <button onClick={logoutButtonClicked}>Logout</button>
             </div>
           : <NavLink to={"/auth/login"} className="link">Login</NavLink>
         }
