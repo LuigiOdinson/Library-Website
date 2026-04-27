@@ -38,7 +38,7 @@ export default function ActiveBorrowsSection({ active }) {
               <div className="book-container" key={borrow.id}>
 
                 <div className="book-details">
-                  <img src="/images/They Both Die At The End by Adam Silvera.jpeg" alt="" />
+                  <img src={borrow.img_url} alt="" />
                   <p>{borrow.book_name}</p>
                   <p>{borrow.author_name}</p>
                 </div>

@@ -6,7 +6,8 @@ CREATE TABLE book (
   id INT AUTO_INCREMENT PRIMARY KEY,
   book_name VARCHAR(50) NOT NULL,
   published_at INT NOT NULL,
-  borrowed BOOLEAN DEFAULT false
+  borrowed BOOLEAN DEFAULT false,
+  img_url VARCHAR(255)
 );
 
 CREATE TABLE genre (
@@ -77,6 +78,7 @@ CREATE VIEW book_genre_author AS
     book.book_name,
     book.published_at,
     book.borrowed,
+    book.img_url,
     genre.genre_name,
     author.author_name
   FROM book
@@ -93,6 +95,7 @@ CREATE VIEW book_borrow_returnOption AS
     borrow.user_id,
     book_genre_author.book_name,
     book_genre_author.author_name,
+    book_genre_author.img_url,
     borrow.borrowed_at,
     borrow.returned_at,
     borrow.borrow_fine,

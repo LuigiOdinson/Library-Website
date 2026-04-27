@@ -26,7 +26,7 @@ export default function BorrowsHistorySection({ history }) {
               <div key={borrow.id} className="book-container">
 
                 <div className="book-details">
-                  <img src="/images/They Both Die At The End by Adam Silvera.jpeg" alt="" />
+                  <img src={borrow.img_url} alt="" />
                   <p>{borrow.book_name}</p>
                   <p>{borrow.author_name}</p>
                 </div>

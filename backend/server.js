@@ -1,6 +1,8 @@
 import express from "express"
 import session from "express-session"
 import cors from "cors"
+import path, { dirname } from "path"
+import { fileURLToPath } from "url"
 import { addDefautBooks } from "./defaultData/initializeDatabase.js"
 
 import bookRoutes from './routes/books.js'
@@ -23,6 +25,9 @@ app.use(session({
   resave: false,
   saveUninitialized: false
 }))
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+app.use('/book-covers', express.static(path.join(__dirname, "/public/images/book-covers")));
 
 // Use Routes
 app.use("/api/books", bookRoutes);

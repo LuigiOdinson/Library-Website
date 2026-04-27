@@ -21,26 +21,28 @@ export default function BookSection() {
 
   return (
     <div className="book-section">
-      <img src="/images/They Both Die At The End by Adam Silvera.jpeg" alt="" />
       { // show the book info only when book is loaded
-        book && 
-        <div className="book-info">
-          <p>Book Name: {book.book_name}</p>
-          <p>Book Author: {book.author_name}</p>
-          <p>Published At: {book.published_at}</p>
-          <p>Genre: {book.genre_name}</p>
+        book &&
+        <>
+          <img src={book.img_url} alt="" />
+          <div className="book-info">
+            <p>Book Name: {book.book_name}</p>
+            <p>Book Author: {book.author_name}</p>
+            <p>Published At: {book.published_at}</p>
+            <p>Genre: {book.genre_name}</p>
 
-          <p className="borrow-state-message"
-            style={{
-              color: (book.borrowed) ? 'rgb(255, 106, 106)' : 'rgb(40, 189, 53)',
-            }}>
+            <p className="borrow-state-message"
+              style={{
+                color: (book.borrowed) ? 'rgb(255, 106, 106)' : 'rgb(40, 189, 53)',
+              }}>
               {
                 book.borrowed
-                ? "This book is already borrowed"
-                : "This Book is available"
+                  ? "This book is already borrowed"
+                  : "This Book is available"
               }
-          </p>
-        </div>
+            </p>
+          </div>
+        </>
       }
     </div>
   )

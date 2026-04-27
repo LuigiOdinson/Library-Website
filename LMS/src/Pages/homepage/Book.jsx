@@ -5,7 +5,7 @@ export default function Book({book}) {
     <div className="book">
         <Link to={`/books/${book.id}`}>
           <div className="book-cover">
-            <img src="/images/They Both Die At The End by Adam Silvera.jpeg" alt="" />
+            <img src={book.img_url} alt="" />
           </div>
           <div className="book-title-info">
             <h2>{book.book_name}</h2>

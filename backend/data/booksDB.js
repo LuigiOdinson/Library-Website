@@ -40,10 +40,14 @@ export async function get_single_book(id) {
 }
 
 export async function add_book(book_name, published_at, genre_id, author_id) {
+  // making the image url path
+  const book_name_kebab = book_name.toLowerCase().replaceAll(' ', '-');
+  const img_url = `http://localhost:8080/book-covers/${book_name_kebab}.jpg`;
+
   const [result] = await pool.query(`
-    INSERT INTO book (book_name, published_at)
-    VALUES (?, ?)  
-  `, [book_name, published_at]);
+    INSERT INTO book (book_name, published_at, img_url)
+    VALUES (?, ?, ?)  
+  `, [book_name, published_at, img_url]);
 
   const book_id = result.insertId;
 
