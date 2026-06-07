@@ -54,9 +54,9 @@ CREATE TABLE return_option (
   return_option_fine DECIMAL(8, 0) NOT NULL DEFAULT 0
 );
 INSERT INTO return_option (return_option_days, return_option_fine) VALUES
-(7, 5000),
-(14, 7000),
-(21, 9000);
+(7, 10000),
+(14, 20000),
+(21, 30000);
 
 CREATE TABLE borrow (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -115,7 +115,6 @@ INSERT INTO genre (genre_name) VALUES
 ('Romance'),
 ('Self-Help'),
 ('Fantasy');
-
 
 INSERT INTO author (author_name) VALUES
 ('F. Scott Fitzgerald'),

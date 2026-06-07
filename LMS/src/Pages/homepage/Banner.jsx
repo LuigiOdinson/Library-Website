@@ -42,7 +42,7 @@ export default function Banner() {
 
   return (
     <div className='banner'>
-      <h1>Find your next book</h1>
+      <h1>Find Your Next Book Here!</h1>
 
       <div className='search-bar'>
         <div className='search-section'>

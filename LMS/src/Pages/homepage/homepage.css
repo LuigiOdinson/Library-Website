@@ -12,6 +12,11 @@
     justify-content: center;
     gap: 10px;
 }
+.banner h1 {
+    font-family: "Playwrite-Joined";
+    font-size: 32px;
+    color: rgb(29, 45, 68);
+}
 .search-bar {
     margin-top: 40px;
     display: flex;

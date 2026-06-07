@@ -1,5 +1,14 @@
+@font-face {
+  font-family: "Playwrite-Joined";
+  src: url('../public/fonts/PlaywriteGBJ-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: "Nunito";
+  src: url("../public/fonts/Nunito-VariableFont_wght.ttf");
+}
+
 body {
-  font-family: Roboto, Arial;
+  font-family: "Nunito", Roboto;
   color: black;
   margin: 0;
 }
