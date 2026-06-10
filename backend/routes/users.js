@@ -14,5 +14,16 @@ router.get("/:user_id", async (req, res) => {
   res.json(user);
 })
 
+router.post("/banUser/:user_id", async (req, res) => {
+  const user_id = req.params.user_id;
+  const [user] = await usersDB.banUser(user_id);
+  res.json({message: `User with id ${user.id} got banned`});
+})
+
+router.post("/unbanUser/:user_id", async (req, res) => {
+  const user_id = req.params.user_id;
+  const [user] = await usersDB.unbanUser(user_id);
+  res.json({message: `User with id ${user.id} got unbanned`});
+})
 
 export default router;

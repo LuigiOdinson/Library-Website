@@ -15,6 +15,24 @@ export async function findUserById(user_id) {
   return result.length ? result : [];
 }
 
+export async function banUser(user_id) {
+  await pool.query(`
+    UPDATE user
+    SET banned = TRUE
+    WHERE id = ?
+  `, [user_id]);
+  return findUserById(user_id);
+}
+
+export async function unbanUser(user_id) {
+  await pool.query(`
+    UPDATE user
+    SET banned = FALSE
+    WHERE id = ?
+  `, [user_id]);
+  return findUserById(user_id);
+}
+
 // auth functions
 export async function findUserByEmail(email) {
   const [result] = await pool.query(`
