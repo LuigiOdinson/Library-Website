@@ -34,7 +34,7 @@ export default function BorrowsHistorySection({ history }) {
                 <div className="return-status">
                   <p>Borrowed at: {borrowedAtDate}</p>
                   <p>Returned at: {returnedAtDate}</p>
-                  <p>Fine: {borrow.borrow_fine ? borrow.borrow_fine + "$" : "No Fine"}</p>
+                  <p>Fine: {borrow.borrow_fine ? borrow.borrow_fine + " Toman" : "No Fine"}</p>
                 </div>
               </div>
             )

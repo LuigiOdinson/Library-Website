@@ -4,7 +4,7 @@
 
 /*Banner*/
 .banner {
-    background-color: #bfd0d9;
+    background-color: #a2b9c7;
     padding: 20px 0px;
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@
 .banner h1 {
     font-family: "Playwrite-Joined";
     font-size: 32px;
-    color: rgb(29, 45, 68);
+    color: #F5F0EA;
 }
 .search-bar {
     margin-top: 40px;
@@ -29,12 +29,17 @@
     height: 35px;
 }
 .search-section input {
+    background-color: #F5F0EA;
+    color: #112250;
     width: 450px;
     height: 100%;
     padding: 0px 10px;
-    border: 1px solid #578FCA;
+    border: none;
     border-radius: 1rem;
     margin-right: 10px;
+}
+.search-section input::placeholder {
+    color: #112250;
 }
 .search-section input:focus {
     outline: none;
@@ -46,9 +51,9 @@
     padding: 10px 20px;
 }
 .filter-tag {
-    background-color: white;
-    color: #1d2d44;
-    border: 1px solid #578FCA;
+    background-color: #dbd6cf;
+    color: #112250;
+    border: none;
     border-radius: 20px;
     margin-left: 5px;
     padding: 5px 10px;
@@ -56,7 +61,7 @@
     transition: 0.3s, color 0.3s;
 }
 .filter-tag:hover {
-    background-color: #dedede;
+    background-color: #928f8b;
 }
 
 /*BooksGrid*/
@@ -73,7 +78,7 @@
     margin: auto;
 }
 .book {
-    background-color: #edf6f9;
+    background-color: white;
     height: auto;
     border-radius: 1rem;
     cursor: pointer;
@@ -99,7 +104,7 @@
 }
 .book-title-info {
     padding: 10px 15px;
-    color: #1d2d44;
+    color: #112250;
 }
 .book-title-info h2 {
     font-size: 18px;
@@ -110,5 +115,5 @@
 }
 .books-grid a {
     text-decoration: none;
-    color: black;
+    color: #112250;
 }

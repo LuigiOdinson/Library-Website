@@ -9,7 +9,8 @@
   margin-right: auto;
 }
 .user-info-section {
-  background-color: aliceblue;
+  background-color: #ffffff;
+  border-radius: 1rem;
   padding: 10px;
   line-height: 1.8;
 }
@@ -17,9 +18,12 @@
 
 .active-borrows-section,
 .borrows-history-section {
-  border-top: 2px solid rgb(222, 222, 222);
-  padding: 15px 0px;
+  margin-top: 30px;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  padding: 15px 10px;
 }
+
 .title {
   margin-bottom: 15px;
   font-size: 20px;
@@ -34,11 +38,13 @@
 .book-container {
   display: grid;
   grid-template-columns: 200px 1fr;
-  margin-bottom: 35px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid rgb(177, 177, 177);
+  margin-bottom: 30px;
 }
 .book-details {
   padding-right: 20px;
-  border-right: 2px solid rgb(187, 187, 187);
+  border-right: 2px solid rgb(177, 177, 177);
   line-height: 1.5;
 }
 .book-details img {
@@ -65,14 +71,14 @@
 .progress-bar-container {
   margin-top: 20px;
   height: 25px;
-  border: 2px solid rgb(153, 153, 153);
+  border: none;
   background-color: lightgray;
   border-radius: 50px;
   overflow: hidden;
 }
 .progress-bar {
   height: 100%;
-  background-color: green;
+  background-color: #2F4157;
 }
 .dates-container {
   margin-top: 10px;

@@ -5,6 +5,7 @@
   margin-top: 150px;
 }
 .auth-container {
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;

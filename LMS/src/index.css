@@ -8,6 +8,7 @@
 }
 
 body {
+  background-color: #F4F4F2;
   font-family: "Nunito", Roboto;
   color: black;
   margin: 0;
@@ -26,7 +27,7 @@ p {
   font-size: 18px;
 }
 .global-button-style {
-  background-color: #1d2d44;
+  background-color: #2F4157;
   color: white;
   height: 100%;
   padding: 0.5rem 2rem;
