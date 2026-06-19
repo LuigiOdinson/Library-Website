@@ -16,18 +16,18 @@ export default function ActiveBorrowsSection({ active }) {
       <div className="books-container">
         {
           active.map((borrow) => {
-            // calculating return date
+            // calculating and formatting borrowedAtDate and returnAtDate
             let borrowedAtMS = dayjs(borrow.borrowed_at).valueOf();
             let currentTimeMS = dayjs().valueOf();
-            
+
             let borrowedAtDate = dayjs(borrowedAtMS).format("DD-MM-YYYY");
             let returnAtDate = dayjs(borrowedAtMS).add(borrow.return_option_days, 'day').format("DD-MM-YYYY");
             
-            // calculating percentage of time elapsed
+            // calculating percentage of time elapsed for progress bar
             let timeElapsedMS = currentTimeMS - borrowedAtMS;
 
             // ----------------FOR TESTING------------------
-            //timeElapsedMS = dayjs(timeElapsedMS).add(3, 'day')
+            //timeElapsedMS = dayjs(timeElapsedMS).add(14, 'day')
             // ---------------------------------------------
 
             let totalDaysMS = borrow.return_option_days * (24 * 60 * 60 * 1000);
