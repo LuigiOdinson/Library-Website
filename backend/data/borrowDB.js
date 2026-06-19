@@ -12,7 +12,7 @@ export async function get_borrows_info_by_user(user_id) {
       SELECT * FROM book_borrow_returnOption
       WHERE user_id = ?
   `, [user_id]);
-  return result;
+  return result.length ? result : null
 }
 
 export async function get_single_borrow(id) {
@@ -20,7 +20,7 @@ export async function get_single_borrow(id) {
     SELECT * FROM borrow
     WHERE id = ?
   `, [id])
-  return result;
+  return result.length ? result : null
 }
 
 export async function add_borrow(book_id, user_id, return_option_id){

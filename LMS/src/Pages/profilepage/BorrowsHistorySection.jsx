@@ -23,7 +23,7 @@ export default function BorrowsHistorySection({ history }) {
             let returnedAtDate = dayjs(returnedAtMS).format("DD-MM-YYYY");
 
             return (
-              <div key={borrow.id} className="book-container">
+              <div key={borrow.borrow_id} className="book-container">
 
                 <div className="book-details">
                   <img src={borrow.img_url} alt="" />
@@ -34,7 +34,7 @@ export default function BorrowsHistorySection({ history }) {
                 <div className="return-status">
                   <p>Borrowed at: {borrowedAtDate}</p>
                   <p>Returned at: {returnedAtDate}</p>
-                  <p>Fine: {borrow.borrow_fine ? borrow.borrow_fine + " Toman" : "No Fine"}</p>
+                  <p>Fine Paid: {borrow.borrow_fine ? borrow.borrow_fine + " Toman" : "No Fine"}</p>
                 </div>
               </div>
             )

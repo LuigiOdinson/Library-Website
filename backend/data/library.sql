@@ -91,7 +91,8 @@ CREATE VIEW book_genre_author AS
 
 CREATE VIEW book_borrow_returnOption AS
   SELECT 
-    book_genre_author.id,-- same as book id
+    book_genre_author.id AS book_id,
+    borrow.id AS borrow_id,
     borrow.user_id,
     book_genre_author.book_name,
     book_genre_author.author_name,

@@ -35,7 +35,7 @@ export default function ActiveBorrowsSection({ active }) {
             let timeElapsedComplete = (timeElapsedPercentage >= 100);
 
             return (
-              <div className="book-container" key={borrow.id}>
+              <div className="book-container" key={borrow.borrow_id}>
 
                 <div className="book-details">
                   <img src={borrow.img_url} alt="" />
@@ -47,10 +47,9 @@ export default function ActiveBorrowsSection({ active }) {
                   <div>
                     {
                       timeElapsedComplete
-                        ? <p className="return-status-text">Please Return the book</p>
-                        : <p className="return-status-text">Time Left to return:</p>
+                        ? <p>Please Return the book</p>
+                        : <p>Time Left to return:</p>
                     }
-
                     <div className="progress-bar-section">
                       <div className="progress-bar-container">
                         <div className="progress-bar" style={{ width: `${timeElapsedPercentage}%` }}></div>
@@ -61,6 +60,7 @@ export default function ActiveBorrowsSection({ active }) {
                         <p className="date">return at: {returnAtDate}</p>
                       </div>
                     </div>
+                    <p className="fine-warning">Fine for not returning: {borrow.return_option_fine} Toman</p>
                   </div>
                 </div>
               </div>

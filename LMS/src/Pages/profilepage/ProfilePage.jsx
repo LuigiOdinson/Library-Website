@@ -13,7 +13,6 @@ export default function ProfilePage() {
   useEffect(() => {
     const getBorrowsForUser = async () => {
       const res = await axios.get("/api/borrow/myBorrows");
-      console.log(res.data)
       setUserBorrows(res.data);
     }
     getBorrowsForUser();
