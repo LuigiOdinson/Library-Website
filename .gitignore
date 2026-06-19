@@ -5,6 +5,7 @@ yarn-error.log*
 pnpm-debug.log*
 *.npmrc
 extra/
+todo.txt
 
 # Environment variables
 .env
