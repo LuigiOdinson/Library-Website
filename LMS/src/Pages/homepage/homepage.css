@@ -4,7 +4,7 @@
 
 /*Banner*/
 .banner {
-    background-color: #a2b9c7;
+    background-image: url("../../../public/images/banner-background.png");
     padding: 20px 0px;
     display: flex;
     flex-direction: column;
@@ -14,7 +14,7 @@
 }
 .banner h1 {
     font-family: "Playwrite-Joined";
-    font-size: 32px;
+    font-size: 37px;
     color: #F5F0EA;
 }
 .search-bar {
